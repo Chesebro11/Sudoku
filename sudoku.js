@@ -1,7 +1,7 @@
 var numSelected = null;
 var tileSelected = null;
 
-varr errors = 0;
+var errors = 0;
 
 var board = [
   "--74916-5",
@@ -26,3 +26,19 @@ var solution = [
   "675832941",
   "812945763",
 ]
+
+window.onload = function() {
+  setGame();
+}
+
+function setGame() {
+  // digits 1-9
+  for (let i = 1; i<=9; i++) {
+    // <div id='1' class = "number">1</div>
+    let number = document.createElement("div");
+    number.id = i;
+    number.innerText = i;
+    number.classList.add('number');
+    document.getElementById("digits").appendChild(number);
+  }
+}
